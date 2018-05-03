@@ -140,23 +140,28 @@ int bub(int list[MAX_CLASS][MAX_NUMBER]) {
 	system("cls");
 	printf("정렬 할 반 입력 : ");
 	scanf("%d", &x);
-	
+
 	HDC hdc = GetWindowDC(GetForegroundWindow());
 
-	for (k = 0;k < MAX_NUMBER;k++) {
-		Rectangle(hdc, 0, 0, 1000, 1000);
-		for (i = 0;i < MAX_NUMBER - 1;i++) {
-			if (list[x - 1][i] > list[x - 1][i + 1]) {
-				int tmp = list[x-1][i];
-				list[x - 1][i] = list[x - 1][i + 1];
-				list[x - 1][i + 1] = tmp;
+	if (x <= 5)
+	{
+		for (k = 0;k < MAX_NUMBER;k++) {
+			Rectangle(hdc, 0, 0, 1000, 1000);
+			for (i = 0;i < MAX_NUMBER - 1;i++) {
+				if (list[x - 1][i] > list[x - 1][i + 1]) {
+					int tmp = list[x - 1][i];
+					list[x - 1][i] = list[x - 1][i + 1];
+					list[x - 1][i + 1] = tmp;
+				}
 			}
-		}
 
+		}
+		for (i = 0;i < MAX_NUMBER;i++) {
+			Rectangle(hdc, 200 + i * 30, 200, 230 + i * 30, 200 - list[x - 1][i]);
+		}
 	}
-	for (i = 0;i < MAX_NUMBER;i++) {
-		Rectangle(hdc, 200 + i * 30, 200, 230 + i * 30, 200 - list[x - 1][i]);
-	}
+	else
+		printf("\n잘못된 입력입니다.\n");
 
 	main();
 	return 0;
