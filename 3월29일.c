@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
-#define MAX_CLASS 5      //classÀÇ ¼ö
-#define MAX_NUMBER 20   //°¢ class´ç ÇĞ»ı ¼ö
+#define MAX_CLASS 5      //classì˜ ìˆ˜
+#define MAX_NUMBER 20   //ê° classë‹¹ í•™ìƒ ìˆ˜
 
-//Á¡¼ö °ü¸®¸¦ À§ÇÑ ÇÔ¼ö ¼±¾ğ
-// printGrade();   °¢ ¹İº°·Î Á¡¼ö¸¦ Ãâ·ÂÇÏ±â À§ÇÑ ÇÔ¼ö
-// updateGrade();   ¹İ ¹øÈ£¸¦ ÀÔ·Â¹Ş¾Æ Á¡¼ö¸¦ ¼öÁ¤ÇÏ±â À§ÇÑ ÇÔ¼ö
-// averageGrade();   °¢ ¹İº°·Î Æò±ÕÁ¡¼ö¸¦ Ãâ·ÂÇÏ±â À§ÇÑ ÇÔ¼ö
+//ì ìˆ˜ ê´€ë¦¬ë¥¼ ìœ„í•œ í•¨ìˆ˜ ì„ ì–¸
+// printGrade();   ê° ë°˜ë³„ë¡œ ì ìˆ˜ë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
+// updateGrade();   ë°˜ ë²ˆí˜¸ë¥¼ ì…ë ¥ë°›ì•„ ì ìˆ˜ë¥¼ ìˆ˜ì •í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
+// averageGrade();   ê° ë°˜ë³„ë¡œ í‰ê· ì ìˆ˜ë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
 
-//ÇĞ»ıµéÀÇ Á¡¼ö¸¦ ÀúÀåÇÒ ¸®½ºÆ®(¹è¿­) ¼±¾ğ
+//í•™ìƒë“¤ì˜ ì ìˆ˜ë¥¼ ì €ì¥í•  ë¦¬ìŠ¤íŠ¸(ë°°ì—´) ì„ ì–¸
 int list[MAX_CLASS][MAX_NUMBER] = {
 	{ 30,16,21,43,89,16,48,55,30,74,61,100,70,17,95,45,69,38,43,81 },
 	{ 90,29,13,47,46,68,30,37,3, 74,67, 33,86,72,60,15,83,29,95,25 },
@@ -23,25 +23,25 @@ int printGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 	int a, b;
 
 	system("cls");
-	printf("1~5¹İÀÌ ÀÖÀ¸¸ç, 6Àº ÀüÃ¼Ãâ·Â\nÁ¡¼ö¸¦ Ãâ·ÂÇÏ°í ½ÍÀº ¹İÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+	printf("1~5ë°˜ì´ ìˆìœ¼ë©°, 6ì€ ì „ì²´ì¶œë ¥\nì ìˆ˜ë¥¼ ì¶œë ¥í•˜ê³  ì‹¶ì€ ë°˜ì„ ì…ë ¥í•˜ì„¸ìš”:");
 	scanf("%d", &a);
 	if (a < 6) {
 		for (b = 0; b < MAX_NUMBER; b++)
 		{
-			printf("%d¹İ %d¹ø : %dÁ¡\n", a, b + 1, list[a - 1][b]);
+			printf("%dë°˜ %dë²ˆ : %dì \n", a, b + 1, list[a - 1][b]);
 		}
 		printf("\n");
 	}
 	else if (a == 6) {
 		for (a = 0; a < MAX_CLASS; a++) {
 			for (b = 0; b < MAX_NUMBER; b++) {
-				printf("%d¹İ %d¹ø : %dÁ¡\n", a + 1, b + 1, list[a][b]);
+				printf("%dë°˜ %dë²ˆ : %dì \n", a + 1, b + 1, list[a][b]);
 			}
 			printf("\n");
 		}
 	}
 	else {
-		printf("Àß¸øµÈ ¹İ ÀÔ·ÂÀÔ´Ï´Ù.\n");
+		printf("ì˜ëª»ëœ ë°˜ ì…ë ¥ì…ë‹ˆë‹¤.\n");
 	}
 
 	main();
@@ -50,17 +50,17 @@ int printGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 int updateGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 	int a, b, c;
 	system("cls");
-	printf("¼öÁ¤ÇÒ ÇĞ»ıÀÇ ¹İ ¹øÈ£ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+	printf("ìˆ˜ì •í•  í•™ìƒì˜ ë°˜ ë²ˆí˜¸ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 	scanf("%d %d %d", &a, &b, &c);
 
 	if ((a > 5 || a < 0) || (b > 20 || b < 0) || (c > 100 || c < 0)) {
-		printf("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.\n");
+		printf("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.\n");
 
 	}
 	else {
-		printf("º¯°æ Àü %d¹İ %d¹ø : %dÁ¡\n", a, b, list[a - 1][b - 1]);
+		printf("ë³€ê²½ ì „ %dë°˜ %dë²ˆ : %dì \n", a, b, list[a - 1][b - 1]);
 		list[a - 1][b - 1] = c;
-		printf("º¯°æ ÈÄ %d¹İ %d¹ø : %dÁ¡\n", a, b, list[a - 1][b - 1]);
+		printf("ë³€ê²½ í›„ %dë°˜ %dë²ˆ : %dì \n", a, b, list[a - 1][b - 1]);
 
 	}
 	main();
@@ -69,7 +69,7 @@ int updateGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 	int a, i, sum = 0, avg[5],gam;
 	system("cls");
-	printf("1~5¹İÀÌ ÀÖÀ¸¸ç,6Àº ÀüÃ¼ Ãâ·Â\nÆò±Õ Á¡¼ö¸¦ Ãâ·ÂÇÒ ¹İÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("1~5ë°˜ì´ ìˆìœ¼ë©°,6ì€ ì „ì²´ ì¶œë ¥\ní‰ê·  ì ìˆ˜ë¥¼ ì¶œë ¥í•  ë°˜ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%d", &a);
 	switch (a) {
 	case 1:
@@ -77,7 +77,7 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 			sum += list[a - 1][i];
 			avg[0] = sum / MAX_NUMBER;
 		}
-		printf("\n%d¹İ Æò±Õ Á¡¼ö : %dÁ¡\n\n", a, avg[0]);
+		printf("\n%dë°˜ í‰ê·  ì ìˆ˜ : %dì \n\n", a, avg[0]);
 		main();
 		break;
 
@@ -86,7 +86,7 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 			sum += list[a - 1][i];
 			avg[1] = sum / MAX_NUMBER;
 		}
-		printf("\n%d¹İ Æò±Õ Á¡¼ö : %dÁ¡\n\n", a, avg[1]);
+		printf("\n%dë°˜ í‰ê·  ì ìˆ˜ : %dì \n\n", a, avg[1]);
 		main();
 		break;
 	case 3:
@@ -94,7 +94,7 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 			sum += list[a - 1][i];
 			avg[2] = sum / MAX_NUMBER;
 		}
-		printf("\n%d¹İ Æò±Õ Á¡¼ö : %dÁ¡\n\n", a, avg[2]);
+		printf("\n%dë°˜ í‰ê·  ì ìˆ˜ : %dì \n\n", a, avg[2]);
 		main();
 		break;
 	case 4:
@@ -102,7 +102,7 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 			sum += list[a - 1][i];
 			avg[3] = sum / MAX_NUMBER;
 		}
-		printf("\n%d¹İ Æò±Õ Á¡¼ö : %dÁ¡\n\n", a, avg[3]);
+		printf("\n%dë°˜ í‰ê·  ì ìˆ˜ : %dì \n\n", a, avg[3]);
 		main();
 		break;
 	case 5:
@@ -110,7 +110,7 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 			sum += list[a - 1][i];
 			avg[4] = sum / MAX_NUMBER;
 		}
-		printf("\n%d¹İ Æò±Õ Á¡¼ö : %dÁ¡\n\n", a, avg[4]);
+		printf("\n%dë°˜ í‰ê·  ì ìˆ˜ : %dì \n\n", a, avg[4]);
 		main();
 		break;
 	case 6:
@@ -119,7 +119,7 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 				sum += list[a][i];
 				gam = sum / MAX_NUMBER;
 			}
-			printf("\n%d¹İ Æò±Õ Á¡¼ö : %dÁ¡", a+1, gam);
+			printf("\n%dë°˜ í‰ê·  ì ìˆ˜ : %dì ", a+1, gam);
 			
 			sum = 0;
 		}
@@ -138,7 +138,7 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 int bub(int list[MAX_CLASS][MAX_NUMBER]) {
 	int i, k, x;
 	system("cls");
-	printf("Á¤·Ä ÇÒ ¹İ ÀÔ·Â : ");
+	printf("ì •ë ¬ í•  ë°˜ ì…ë ¥ : ");
 	scanf("%d", &x);
 
 	HDC hdc = GetWindowDC(GetForegroundWindow());
@@ -161,7 +161,7 @@ int bub(int list[MAX_CLASS][MAX_NUMBER]) {
 		}
 	}
 	else
-		printf("\nÀß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.\n");
+		printf("\nì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.\n");
 
 	main();
 	return 0;
@@ -174,7 +174,7 @@ int main(void) {
 	int menu;
 
 	while (1) {
-		printf("\n1 : Á¡¼öÃâ·Â/ 2 : Á¡¼ö¼öÁ¤/ 3 : Æò±ÕÁ¡¼öÃâ·Â/ 4 : Á¤·ÄÈÄ ±×·¡ÇÁ / 5 : Á¾·á\n¸Ş´º¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		printf("\n1 : ì ìˆ˜ì¶œë ¥/ 2 : ì ìˆ˜ìˆ˜ì •/ 3 : í‰ê· ì ìˆ˜ì¶œë ¥/ 4 : ì •ë ¬ í›„ ê·¸ë˜í”„ / 5 : ì¢…ë£Œ\në©”ë‰´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		scanf("%d", &menu);
 
 		switch (menu) {
@@ -191,11 +191,11 @@ int main(void) {
 			bub(list);
 			break;
 		case 5:
-			printf("\nÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù\n\n");
+			printf("\ní”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤\n\n");
 			return 0;
 			break;
 		default:
-			printf("\nÀß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù\n\n");
+			printf("\nì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤\n\n");
 			continue;
 		}
 
