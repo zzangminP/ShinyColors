@@ -16,7 +16,7 @@ int list[MAX_CLASS][MAX_NUMBER] = {
 	{ 90,29,13,47,46,68,30,37,3, 74,67, 33,86,72,60,15,83,29,95,25 },
 	{ 39,36,8, 57,56,86,28,7, 72,30,88,12, 11,27,9, 49,21,38,58,75 },
 	{ 30,3, 26,72,8, 72,17,70,29,69,44,47, 6, 77,80,59,8, 77,95,22 },
-	{ 80,98,20,44,54,93,32,86,69,91,38,17, 83,13,92,74,77,11,90,44 } 
+	{ 80,98,20,44,54,93,32,86,69,91,38,17, 83,13,92,74,77,11,90,44 }
 };
 
 int printGrade(int list[MAX_CLASS][MAX_NUMBER]) {
@@ -67,7 +67,7 @@ int updateGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 }
 
 int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
-	int a, i, sum = 0, avg[5],gam;
+	int a, i, sum = 0, avg[5], gam;
 	system("cls");
 	printf("1~5반이 있으며,6은 전체 출력\n평균 점수를 출력할 반을 입력하세요 : ");
 	scanf("%d", &a);
@@ -114,16 +114,16 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 		main();
 		break;
 	case 6:
-		for (a = 0;a<MAX_CLASS;a++) {
+		for (a = 0; a<MAX_CLASS; a++) {
 			for (i = 0; i < MAX_NUMBER; i++) {
 				sum += list[a][i];
 				gam = sum / MAX_NUMBER;
 			}
-			printf("\n%d반 평균 점수 : %d점", a+1, gam);
-			
+			printf("\n%d반 평균 점수 : %d점", a + 1, gam);
+
 			sum = 0;
 		}
-		
+		printf("\n");
 		main();
 		return 0;
 		break;
@@ -133,7 +133,6 @@ int averageGrade(int list[MAX_CLASS][MAX_NUMBER]) {
 
 	}
 }
-
 
 int bub(int list[MAX_CLASS][MAX_NUMBER]) {
 	int i, k, x;
@@ -145,9 +144,9 @@ int bub(int list[MAX_CLASS][MAX_NUMBER]) {
 
 	if (x <= 5)
 	{
-		for (k = 0;k < MAX_NUMBER;k++) {
+		for (k = 0; k < MAX_NUMBER; k++) {
 			Rectangle(hdc, 0, 0, 1000, 1000);
-			for (i = 0;i < MAX_NUMBER - 1;i++) {
+			for (i = 0; i < MAX_NUMBER - 1; i++) {
 				if (list[x - 1][i] > list[x - 1][i + 1]) {
 					int tmp = list[x - 1][i];
 					list[x - 1][i] = list[x - 1][i + 1];
@@ -156,7 +155,7 @@ int bub(int list[MAX_CLASS][MAX_NUMBER]) {
 			}
 
 		}
-		for (i = 0;i < MAX_NUMBER;i++) {
+		for (i = 0; i < MAX_NUMBER; i++) {
 			Rectangle(hdc, 200 + i * 30, 200, 230 + i * 30, 200 - list[x - 1][i]);
 		}
 	}
@@ -167,7 +166,6 @@ int bub(int list[MAX_CLASS][MAX_NUMBER]) {
 	return 0;
 
 }
-
 
 
 int main(void) {
