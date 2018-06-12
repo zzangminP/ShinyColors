@@ -1,0 +1,11 @@
+D:\201804010\database-ex1\database-ex1\bin\Debug\database-ex1.exe.config
+D:\201804010\database-ex1\database-ex1\obj\Debug\database_ex1.Form1.resources
+D:\201804010\database-ex1\database-ex1\obj\Debug\database_ex1.Resources.resources
+D:\201804010\database-ex1\database-ex1\obj\Debug\database-ex1.vbproj.GenerateResource.Cache
+D:\201804010\database-ex1\database-ex1\obj\Debug\database-ex1.xml
+D:\201804010\database-ex1\database-ex1\bin\Debug\학생정보.ndb.mdb
+D:\201804010\database-ex1\database-ex1\bin\Debug\database-ex1.exe
+D:\201804010\database-ex1\database-ex1\bin\Debug\database-ex1.pdb
+D:\201804010\database-ex1\database-ex1\bin\Debug\database-ex1.xml
+D:\201804010\database-ex1\database-ex1\obj\Debug\database-ex1.exe
+D:\201804010\database-ex1\database-ex1\obj\Debug\database-ex1.pdb
