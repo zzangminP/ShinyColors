@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2018_11_07_계산기만들기_곽정민", "2018_11_07_계산기만들기_곽정민\2018_11_07_계산기만들기_곽정민.csproj", "{309377A3-EA31-4D79-929C-46EDC537DCCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{309377A3-EA31-4D79-929C-46EDC537DCCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309377A3-EA31-4D79-929C-46EDC537DCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309377A3-EA31-4D79-929C-46EDC537DCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309377A3-EA31-4D79-929C-46EDC537DCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
